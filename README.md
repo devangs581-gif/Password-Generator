@@ -1,14 +1,27 @@
-# Password Generator 🔐
+# 🔐 Password Generator
 
-This project generates secure random passwords based on user preferences.
+A simple and secure password generator built using JavaScript.
 
-## Features
-- Custom length
-- Include uppercase, lowercase, numbers, symbols
-- Easy UI
+## 🚀 Features
+- Generate strong passwords
+- Customize length
+- Include:
+  - Uppercase letters
+  - Lowercase letters
+  - Numbers
+  - Symbols
 
-## Technologies Used
-- HTML, CSS, JavaScript
+## 🛠️ Technologies Used
+- HTML
+- CSS
+- JavaScript
 
-## How to Run
-Open index.html in browser
+## 📷 Screenshot
+(Add your screenshot here)
+
+## ▶️ How to Run
+1. Download or clone the repo
+2. Open index.html in browser
+
+## 🌐 Live Demo
+(Will add after deployment)
