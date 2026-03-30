@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Password-Generator</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- // <link rel="stylesheet" href="input.css"> -->
+     <style>
+     .gradient {
+  background: linear-gradient(
+    231deg,
+    rgba(22,6,40,1) 0%,
+    rgba(52,28,79,1) 50%,
+    rgba(88,7,125,1) 100%
+  );
+}
+  .custom-bg {
+    background: #170628;
+  }  
+          @media (max-width: 480px) {
+            .container {
+                width: 90%; 
+                padding: 0 1rem;
+                gap: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .display {
+                font-size: 1rem;
+            }
+
+            .copyBtn {
+                font-size: 1rem;
+            }
+            
+            .container p {
+                font-size: 16px;
+            }
+
+            .check label, .check input {
+                font-size: 14px;
+            }
+
+            .generatePass {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+        }
+     </style>
+</head>
+<body>
+    <div id="wrapper" class="p-0 m-0 box-border w-[100vw] h-[100vh] flex items-center justify-center gradient">
+        <div class="container flex flex-col items-center justify-center  w-[400px]   pl-5 pr-5 gap-y-7">
+            <!-- Heading-DIV -->
+             <div class="w-[100%] text-center ">
+                <h1 class="text-3xl text-white font-bold">PASSWORD-GENERATOR</h1>
+             </div>
+             <!-- COPY-DIV -->
+           <div class="w-full flex justify-between  h-[70px] relative shadow-lg pl-5 pr-5 custom-bg rounded-xl border-b-4 border-b-[hsl(290,70%,36%)]">
+                <input  readonly placeholder="Password" class="display bg-transparent text-xl text-yellow-500 font-extrabold  " displayPassword>
+                <button>
+                    <span class="copyMsg absolute top-[-10px] right-[-5px]"></span>
+                   <i class="fa-regular fa-copy copyBtn" style="color: #B197FC;"></i>
+                </button>
+             </div>
+ 
+              <!-- Generate-Passwor-Div -->
+              <div class="w-[100%] flex flex-col gap-y-7 custom-bg pt-5 pl-5 pr-5 pb-5 rounded-xl ">
+                <!-- Length-Div -->
+                 <div class="flex  justify-between ">
+                    <p class="text-[18px] text-white">Password Length</p>
+                    <p class="text-yellow-500 text-[18px] font-bold passLen"></p>
+                 </div>
+
+                 <!-- Sliding-Div -->
+                  <input type="range"  id="slider" min="1" max="20" step="1" class="w-[100%]">
+
+                  <!-- List-Div -->
+                   <div class="text-[16px] text-white font-medium">
+                    
+                    <div class="check">
+                        <input type="checkbox"  id="upperCase" class="checkBox">
+                        <label for="upperCase" >Includes Uppercase Letters</label><br>
+                    </div>
+
+                      <div class="check">
+                        <input type="checkbox"  id="lowerCase" class="checkBox">
+                       <label for="lowerCase">Includes Lowercase Letters</label><br>
+                      </div>
+
+                      <div class="check">
+                        <input type="checkbox"  id="numbers" class="checkBox">
+                       <label for="numbers">Includes Numbers</label><br>
+                      </div>
+
+                      <div class="check">
+                        <input type="checkbox"  id="symbols" class="checkBox">
+                        <label for="symbols">Includes Symbols</label><br>
+                      </div>    
+                   </div>
+                   <!-- Strength-Div -->
+                    <div class="flex justify-between">
+                        <p class="text-white text-[18px] font-semibold">Strength</p>
+                        <div class="w-6 h-6 rounded-full bg-white shadow-lg circle"></div>
+                    </div>
+
+                    <!-- Button-Div -->
+                     <div>
+                        <button class="generatePass border-b-4 border-b-yellow-300 ">Generate Password</button> 
+                     </div>
+
+              </div>
+
+
+
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
